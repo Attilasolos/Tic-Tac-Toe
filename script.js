@@ -11,8 +11,6 @@ for (i = 0; i < n; i++) {
     
 }
 mode = clicked_multi
-document.getElementsByTagName("body")[0].addEventListener("load", createTable())
-for (i = 0; i < n * n; i++) document.getElementById("td" + (i + 1)).addEventListener("click", mode, true)
 
 function clicked_multi(event) {
     if (can_place == false) return
@@ -123,3 +121,24 @@ function dumb_bot() {
     console.log(next_player)
     console.log(chechwin())
 }
+
+function play_end() {
+    document.getElementById('play_button').style.visibility = "hidden";
+    document.getElementById('mode_chooser').style.visibility = 'visible';
+    document.getElementById('mode_chooser').style.animationName = "fade_in";
+    // console.log("faded in")
+}
+
+// for (i = 0; i < n * n; i++) document.getElementById("td" + (i + 1)).addEventListener("click", mode, true)
+document.getElementById('play_button').addEventListener("click", () => {document.getElementById('play_button').style.animationName = 'fade_out'})
+document.getElementById('play_button').addEventListener("animationend", play_end)
+document.getElementById("player1_button").addEventListener("click", () => {
+        mode = clicked_single
+        document.getElementById('mode_chooser').style.animationName = "fade_out"
+    })
+document.getElementById("players2_button").addEventListener("click", () => {
+    mode = clicked_multi
+    document.getElementById('mode_chooser').style.animationName = "fade_out"
+    })
+
+// document.getElementById()

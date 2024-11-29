@@ -9,6 +9,8 @@ body {
     background-image: url(kepek/hatter.jpg);
 }
 
+
+
 #background-opacity {
     width: 100%;
     height: 1080px;
@@ -64,17 +66,19 @@ nav h1 {
     border-radius: 50px;
     margin-top: 20%;
     margin-left: calc(50% - (518px / 2));
+    animation-duration: 1s;
+    cursor: pointer;
 }
 
-#play_button h1 {
+#play_button h1{
     font-size: 6rem;
     text-align: center;
     padding-top: 6%;
 }
 
-/* FOOTER */
+/* Footer */
 
-footer {
+footer{
     height: 55px;
     width: 100%;
     background-color: black;
@@ -96,3 +100,95 @@ footer a {
     color: white;
     text-decoration: none;
 }
+
+/* PLAYER NUMBER BUTTONS*/
+
+#mode_chooser {
+    animation-duration: 1s;
+    cursor: pointer;
+    /* opacity: 0; */
+    visibility: hidden;
+}
+
+#player1_button{
+    position: absolute;
+    width: 610px;
+    height: 225px;
+    background-color: black;
+    color: red;
+    border-radius: 50px;
+    margin-top: 10%;
+    margin-left: calc(50% - (610px / 2));
+    /* opacity: 0; */
+}
+
+#players2_button{
+    position: absolute;
+    width: 610px;
+    height: 225px;
+    background-color: black;
+    color: red;
+    border-radius: 50px;
+    margin-top: 30%;
+    margin-left: calc(50% - (610px / 2));
+    /* opacity: 0; */
+}
+
+#player1_button h1{
+    font-size: 6rem;
+    text-align: center;
+    padding-top: 8%;
+}
+
+#players2_button h1{
+    font-size: 6rem;
+    text-align: center;
+    padding-top: 9%;
+}
+/*PLAYER NAMER*/
+
+#one_player_namer{
+    width: 881px;
+    height: 397px;
+    position: absolute;
+    background-color: black;
+    color: red;
+    border-radius: 50px;
+    margin-top: 15%;
+    margin-left: calc(50% - (881px / 2));
+}
+#two_player_namer{
+    width: 962px;
+    height: 386px;
+    position: absolute;
+    background-color: black;
+    color: red;
+    border-radius: 50px;
+    visibility: hidden;
+    margin-top: 18%;
+    margin-left: calc(50% - (881px / 2));
+}
+#player_name{
+    position: relative;
+    top: 174px;
+    left: 183px;
+    width: 513px;
+    height: 90px;
+}
+#one_player_namer label{
+    position: relative;
+    top: 44px;
+    left: 225px;
+    font-size: 80px;
+}
+
+@keyframes fade_out {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fade_in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+

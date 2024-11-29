@@ -20,14 +20,45 @@
             </article>
         </nav>
     </header>
-    <section id="play_button">
-        <div></div>    
+
+    <!-- play start -->
+    <section id="play_button">  
         <h1>Play</h1>
     </section>
+
+    <section id="mode_chooser">
+        <article id="player1_button">  
+            <h1>One Player</h1>
+        </article>
+
+        <article id="players2_button">  
+            <h1>Two Players</h1>
+        </article>
+    </section>
+    <!-- player naming-->>
+    <section id="one_player_namer">
+        <form action="">
+            <label for="player_name">Your Name</label>
+            <br>
+            <input type="text" name="player_name" id="player_name">
+        </form>
+    </section>
+    
+    <section id="two_player_namer">
+        <form action="">
+            <label for="player1_name">Your Name</label>
+            <input type="text" name="player1_name" id="player1_name">
+            <label for="player2_name">Your Name</label>
+            <input type="text" name="player2_name" id="player2_name">
+        </form>
+    </section>
+
     <footer>
         <a href="https://jedlik.eu/" target="_blank">
             <h1>Powered by: Jedlik</h1>
         </a>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
