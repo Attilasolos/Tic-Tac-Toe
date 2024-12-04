@@ -14,12 +14,27 @@
         <nav>
             <img src="kepek/logo.svg" alt="" id="logo">
             <h1>Tic Tac Toe</h1>
-            <article id="sign_in">
+            <article id="sign_in_logo">
                 <p>Sign in</p>
                 <img src="kepek/log_in_logo.png" alt="">
             </article>
         </nav>
     </header>
+
+    <!-- Sign in -->
+     <section id="sign_in">
+        <h1>Sign in</h1>
+        <form action="">
+            <input type="text" id="name" placeholder="Name">
+            <input type="password" id="password" placeholder="Password">
+        </form>
+        <div id="sign_in_buttons">
+            <h3 id="new_profile" onclick="newProfile()">New Profile</h3>
+            <h3 id="sep">|</h3>
+            <h3 id="continue" onclick="logIn()">Continue</h3>
+        </div>
+        <img src="kepek/logo.svg" alt="">
+     </section>
 
     <!-- play start -->
     <section id="play_button">  
@@ -60,5 +75,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="sign_in.js"></script>
 </body>
 </html>

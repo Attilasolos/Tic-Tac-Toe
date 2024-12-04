@@ -41,18 +41,24 @@ nav h1 {
     font-size: 2rem;
 }
 
-#sign_in {
+#sign_in_logo {
     display: flex;
     align-items: center;
 }
 
-#sign_in img {
+#sign_in_logo img {
     padding-right: 20px;
     width: 30%;
+    cursor: pointer;
 }
 
-#sign_in p {
+#sign_in_logo p {
     padding-right: 15px;
+    cursor: pointer;
+}
+
+#sign_in_logo p:hover {
+    text-decoration: underline;
 }
 
 /* PLAY BUTTON */
@@ -68,6 +74,7 @@ nav h1 {
     margin-left: calc(50% - (518px / 2));
     animation-duration: 1s;
     cursor: pointer;
+    display: none; /* TODO!!!!! */
 }
 
 #play_button h1{
@@ -76,7 +83,69 @@ nav h1 {
     padding-top: 6%;
 }
 
-/* Footer */
+/* SIGN IN */
+
+#sign_in {
+    height: 600px;
+    width: 450px;
+    background-color: black;
+    color: red;
+    display: flex;
+    flex-direction: column;
+    margin-top: calc(25% - (600px / 2));
+    margin-left: calc(50% - (450px / 2));
+    position: absolute;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sign_in h1 {
+    font-size: 3.5rem;
+    padding: 50px; 
+}
+
+#sign_in input {
+    width: 100%;
+    height: 60%;
+}
+
+#name {
+    margin-bottom: 25px;
+} 
+
+#sign_in h3 {
+    font-size: 2rem;
+    padding-top: 80px;
+    cursor: pointer;
+}
+
+#sign_in img {
+    width: 20%;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+#sign_in_buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#new_profile {
+    padding-right: 40px;
+}
+
+#sep {
+    text-align: center;
+    cursor: default;
+}
+
+#continue {
+    padding-left: 40px;
+}
+
+/* FOOTER */
 
 footer{
     height: 55px;
@@ -120,6 +189,7 @@ footer a {
     margin-top: 10%;
     margin-left: calc(50% - (610px / 2));
     /* opacity: 0; */
+    display: none; /* TODO!!! */
 }
 
 #players2_button{
@@ -132,6 +202,7 @@ footer a {
     margin-top: 30%;
     margin-left: calc(50% - (610px / 2));
     /* opacity: 0; */
+    display: none; /* TODO!!!! */
 }
 
 #player1_button h1{
@@ -156,6 +227,7 @@ footer a {
     border-radius: 50px;
     margin-top: 15%;
     margin-left: calc(50% - (881px / 2));
+    display: none; /* TODO!! */ 
 }
 #two_player_namer{
     width: 962px;
