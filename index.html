@@ -14,15 +14,20 @@
         <nav>
             <img src="kepek/logo.svg" alt="" id="logo">
             <h1>Tic Tac Toe</h1>
-            <article id="sign_in_logo">
+            <form action="">
+                <label for="animation_speed_input">animation speed: </label>
+                <input type="range" id="animation_speed_input" min="20" max="100">
+            </form>
+            <article id="sign_in_nav">
                 <p>Sign in</p>
                 <img src="kepek/log_in_logo.png" alt="">
             </article>
         </nav>
     </header>
 
+
     <!-- Sign in -->
-     <section id="sign_in">
+    <section id="sign_in">
         <h1>Sign in</h1>
         <form action="">
             <input type="text" id="name" placeholder="Name">
@@ -50,22 +55,64 @@
             <h1>Two Players</h1>
         </article>
     </section>
-    <!-- player naming-->>
+
+    <!-- player naming -->
     <section id="one_player_namer">
-        <form action="">
+        <!-- <form action=""> -->
             <label for="player_name">Your Name</label>
             <br>
-            <input type="text" name="player_name" id="player_name">
-        </form>
+    <input type="text" name="player_name" id="player_name" style="font-size: 80px;">
+        <!-- </form> -->
     </section>
     
     <section id="two_player_namer">
-        <form action="">
-            <label for="player1_name">Your Name</label>
+        <!-- <form action=""> -->
+            <label for="player1_name">first player:</label>
             <input type="text" name="player1_name" id="player1_name">
-            <label for="player2_name">Your Name</label>
+            <br>
+            <label for="player2_name">second player:</label>
             <input type="text" name="player2_name" id="player2_name">
-        </form>
+        <!-- </form> -->
+    </section>
+
+    <!-- size chooser -->
+    <section id="size">
+        <article id="size_chooser">
+            <h1 id="table_size">Table size</h1>
+            <h2 id="size3">3x3</h2>
+            <h2 id="size4">4x4</h2>
+            <h2 id="size5">5x5</h2>
+        </article>
+
+        <article id="size_projection">
+        </article>
+    </section>
+    <section id="game_start">
+        <article id="player_1">
+            <h1 id="name1">Slo</h1>
+            <h3>X</h3>
+        
+        </article>
+        <div id="table_div"></div>
+        <article id="player_2">
+            <h1 id="name2">Bognár Pál</h1>
+            <h3>O</h3>
+        </article>
+    </section>
+ 
+
+    <section id="play_end">
+        <article id="who_won">
+            <h1 id="winner"></h1>
+        </article>
+        
+        <article id="play_more">
+            <h3>Do you want to play more?</h3>
+            <div id="h1">
+                <h1 id="yes">Yes</h1>
+                <h1 id="enough">Enough</h1>
+            </div>
+        </article>
     </section>
 
     <footer>
@@ -75,6 +122,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="sign_in.js"></script>
 </body>
 </html>

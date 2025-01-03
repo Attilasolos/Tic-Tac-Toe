@@ -3,6 +3,22 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    /* overflow-y: hidden; */
+    /* border: 3px solid red; */
+}
+
+:root {
+    --animation_time: 0.25s;
+    --play_visible : visible;
+    --mod_chooser_visible : hidden;
+    --one_player: hidden;
+    --two_player: hidden;    
+    --size_chooser: hidden;
+    --playboard: hidden;
+    --play_more: hidden;
+    --sign_in: hidden;
+    --table_size: 3;
 }
 
 body {
@@ -17,6 +33,7 @@ body {
     background-color: #7A7A7A;
     opacity: 60%;
     position: fixed;
+    
 }
 
 /* HEADER/NAV */
@@ -41,29 +58,31 @@ nav h1 {
     font-size: 2rem;
 }
 
-#sign_in_logo {
+nav form {
+    position: absolute;
+    left: 360px;
+}
+
+#sign_in_nav {
+    width: 125px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-#sign_in_logo img {
+#sign_in img {
     padding-right: 20px;
     width: 30%;
-    cursor: pointer;
 }
 
-#sign_in_logo p {
+#sign_in p {
     padding-right: 15px;
-    cursor: pointer;
-}
-
-#sign_in_logo p:hover {
-    text-decoration: underline;
 }
 
 /* PLAY BUTTON */
 
 #play_button {
+    visibility: var(--play_visible);
     position: absolute;
     width: 518px;
     height: 182px;
@@ -72,9 +91,8 @@ nav h1 {
     border-radius: 50px;
     margin-top: 20%;
     margin-left: calc(50% - (518px / 2));
-    animation-duration: 1s;
+    animation-duration: var(--animation_time);
     cursor: pointer;
-    display: none; /* TODO!!!!! */
 }
 
 #play_button h1{
@@ -82,6 +100,7 @@ nav h1 {
     text-align: center;
     padding-top: 6%;
 }
+
 
 /* SIGN IN */
 
@@ -98,6 +117,8 @@ nav h1 {
     border-radius: 50px;
     align-items: center;
     justify-content: space-between;
+    animation-duration: var(--animation_time);
+    visibility: var(--sign_in);
 }
 
 #sign_in h1 {
@@ -145,7 +166,7 @@ nav h1 {
     padding-left: 40px;
 }
 
-/* FOOTER */
+/* Footer */
 
 footer{
     height: 55px;
@@ -173,10 +194,10 @@ footer a {
 /* PLAYER NUMBER BUTTONS*/
 
 #mode_chooser {
-    animation-duration: 1s;
+    animation-duration: var(--animation_time);
     cursor: pointer;
     /* opacity: 0; */
-    visibility: hidden;
+    visibility: var(--mod_chooser_visible);
 }
 
 #player1_button{
@@ -189,7 +210,6 @@ footer a {
     margin-top: 10%;
     margin-left: calc(50% - (610px / 2));
     /* opacity: 0; */
-    display: none; /* TODO!!! */
 }
 
 #players2_button{
@@ -202,7 +222,6 @@ footer a {
     margin-top: 30%;
     margin-left: calc(50% - (610px / 2));
     /* opacity: 0; */
-    display: none; /* TODO!!!! */
 }
 
 #player1_button h1{
@@ -227,7 +246,8 @@ footer a {
     border-radius: 50px;
     margin-top: 15%;
     margin-left: calc(50% - (881px / 2));
-    display: none; /* TODO!! */ 
+    visibility: var(--one_player);
+    animation-duration: var(--animation_time);
 }
 #two_player_namer{
     width: 962px;
@@ -239,6 +259,7 @@ footer a {
     visibility: hidden;
     margin-top: 18%;
     margin-left: calc(50% - (881px / 2));
+    visibility: var(--two_player);
 }
 #player_name{
     position: relative;
@@ -254,6 +275,230 @@ footer a {
     font-size: 80px;
 }
 
+#two_player_namer label:first-of-type{
+    position: relative;
+    top: 80px;
+    left: 42px;
+    font-size: 80px;
+    /* margin-top: 83px; */
+}
+
+#two_player_namer label:last-of-type{
+    position: relative;
+    top: 150px;
+    left: 42px;
+    font-size: 80px;
+    /* margin-top: 83px; */
+}
+
+#two_player_namer input{
+    position: relative;
+    top: 79px;
+    left: 160px;
+    width: 337px;
+    height: 68px;
+    text-align: center;
+    font-size: 48px;
+}
+#two_player_namer input:last-of-type{
+    top: 150px;
+    left: 70px;
+}
+
+#size {
+    visibility: var(--size_chooser);
+    animation-duration: var(--animation_time);
+}
+
+#size_chooser{
+    position: absolute;
+    width: 572px;
+    height: 642px;
+    background-color: black;
+    color: red;
+    border-radius: 50px;
+    top: 219px;
+    margin-left: calc(25% - (572px / 2));
+
+}
+
+#table_size{
+    font-size: 96px;
+    margin-top: 25px;
+    margin-left:73px;
+    text-decoration: underline;
+}
+#size_chooser h2{
+    color: white;
+    font-size: 96px;
+    border-radius: 100%;
+    height: 150px;
+    width: 239px;
+}
+
+#size3 {
+    display: flex;
+    position: relative;
+    top: 81px;
+    left: 167px;
+    border: 3px solid white;
+    justify-content: center;
+    align-items: center;
+}
+#size4{
+    position: relative;
+    top: 112px;
+    left: 60px;
+    /* border: 3px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#size5{
+    position: relative;
+    top: -40px;
+    left: 310px;
+    /* border: 3px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#size_projection{
+    position: absolute;
+    width: 572px;
+    height: 642px;
+    background-color: black;
+    color: red;
+    border-radius: 50px;
+    top: 219px;
+    margin-left: calc(75% - (572px / 2));
+}
+#size_projection h1{
+    position: relative;
+    font-size: 96px;
+    text-decoration: underline;
+    top: 80px;
+    left: 190px;
+}
+#size_projection table{
+position: relative;
+    top: 59px;
+    left: 108px;
+}
+
+#game_start {
+    visibility: var(--playboard);
+    animation-duration: var(--animation_time);
+}
+
+#game_table{
+    position: relative;
+    background-color: white;
+    height: 666px;
+    width: 666px;
+    top: 150px;
+    left: calc((100% - 666px) / 2);
+    border-collapse: collapse;
+
+}
+#game_table td{
+    border: 3px solid black;
+    /* height: calc(666/var(table_size)) px;
+    width: calc(666/var(table_size)) px; */
+    overflow: hidden;
+    text-align: center;
+    font-size: 100px;
+}
+#player_1{
+    width: 572px;
+    height: 308px;
+    background-color: black;
+    color: red;
+    position: absolute;
+    top: 160px;
+    left: 20px;
+    border-radius: 50px;
+}
+#player_1 h1{
+    font-size: 6rem;
+    text-align: center;
+    padding-top: 8%;
+}
+#player_1 h3{
+    font-size: 6rem;
+    text-align: center;
+    padding-top: 8%;
+    color: white;
+    margin-bottom: 20px;
+}
+#player_2{
+    width: 572px;
+    height: 308px;
+    background-color: black;
+    color: red;
+    position: absolute;
+    top: 160px;
+    left: 1328px;
+    border-radius: 50px;
+}
+#player_2 h1{
+    font-size: 6rem;
+    text-align: center;
+    padding-top: 8%;
+}
+#player_2 h3{
+    font-size: 6rem;
+    text-align: center;
+    padding-top: 8%;
+    color: white;
+    margin-bottom: 20px;
+}
+#play_more{
+    width: 572px;
+    height: 308px;
+    background-color: black;
+    color: red;
+    position: absolute;
+    top: 300px;
+    left: 1268px;
+    border-radius: 50px;
+}
+#play_end {
+    visibility: var(--play_more);
+    animation-duration: var(--animation_time);
+}
+
+#who_won{
+    width: 572px;
+    height: 308px;
+    background-color: black;
+    color: red;
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    border-radius: 50px;
+}
+#play_more h3{
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 8%;
+    color: white;
+    margin-bottom:20px;
+}
+
+#play_more #h1{
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 8%;
+    margin-bottom: 20px;
+    display:flex;
+    justify-content: space-evenly;
+}
+#winner{
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 17%;
+}
 @keyframes fade_out {
     from {opacity: 1;}
     to {opacity: 0;}
